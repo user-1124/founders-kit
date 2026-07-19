@@ -40,6 +40,26 @@ Read only the file(s) relevant to the task.
 | YouTube | `references/youtube.md` | Suggested, Search, Shorts, Home | Subscriptions, notifications |
 | Threads | `references/threads.md` | For You | Following |
 | Facebook | `references/facebook.md` | Reels, Groups, unconnected recs | Feed (friends/followers) |
+| Reddit | `references/reddit.md` | Hot/Rising → r/all, Popular, Google | Subreddit New feed |
+
+## Two ways in: by platform or by feature
+
+Ranking lives at the **platform** level (a Reel on Instagram and a Reel on Facebook are scored by
+different engines), so the reference files are organized per platform — but each file is broken down
+**by surface/feature** inside. If you're thinking feature-first ("I'm making a Reel / a Story / a
+short-form video / a text post today"), jump straight to the right section:
+
+| Feature you're making | Where it's ranked as a reach vs. retention surface | Read |
+|---|---|---|
+| **Short-form vertical video** (Reels / Shorts) | Reach engine on every platform — strangers, watch-time/completion | `instagram.md` (Reels), `youtube.md` (Shorts), `facebook.md` (Reels) |
+| **Stories** | Retention — existing followers, daily presence | `instagram.md` (Stories), `facebook.md` (Stories) |
+| **Feed image / carousel post** | Retention-leaning; carousels punch above weight | `instagram.md` (Feed), `threads.md` (format), `facebook.md` (format) |
+| **Text / short posts** | Reach via conversation | `x.md`, `threads.md` |
+| **Long-form video** | Depth + evergreen search | `youtube.md` (long-form) |
+| **Threaded / community discussion** | Community reach | `x.md` (threads), `facebook.md` (Groups), `reddit.md` |
+
+Same principle everywhere: **the format is not the unit of ranking — the surface is.** Pick the
+platform's surface, then write to *its* heaviest signal.
 
 ## Cross-platform first principles
 

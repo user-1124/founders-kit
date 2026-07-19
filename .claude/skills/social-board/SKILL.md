@@ -37,6 +37,7 @@ skill** (`references/{instagram,x,youtube,threads,facebook}.md`). Each draft mus
 | Threads For You | Reach (strangers) | **Replies / conversation** | Text hook + carousel/image; reply ladder |
 | FB Reels | Reach (strangers) | Completion + **private sends** | 15–30s cold-open native video |
 | FB Groups | Community reach | Meaningful member comments | Genuine discussion prompt, native |
+| Reddit subreddit | Community reach + evergreen Google | **Early upvote velocity** + comments + upvote ratio | Title-first value post; obey subreddit rules; ~9:1 non-promo |
 
 ## Workflow
 
