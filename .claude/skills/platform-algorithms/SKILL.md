@@ -2,13 +2,13 @@
 name: platform-algorithms
 description: >-
   Authoritative, per-platform playbooks for how social algorithms actually rank and distribute
-  content — Instagram, X/Twitter, YouTube, Threads, and Facebook — each broken down by surface
+  content — Instagram, X/Twitter, YouTube, Threads, Facebook, and Reddit — each broken down by surface
   (Feed, Reels, Stories, Explore, For You, Search, Shorts, Suggested, Groups, etc.), ranking signal
   priority, what wins, and what gets downranked. USE THIS SKILL whenever the task involves creating,
   planning, scheduling, or critiquing social content or a posting strategy for ANY of these
   platforms — writing captions/hooks/threads/scripts, choosing a format (Reel vs Story vs Short vs
   long-form vs text post), deciding hashtags/timing/cadence, growing reach or followers, or asking
-  "how does the <platform> algorithm work / why isn't this reaching people." Also use it as the
+  "how does the platform algorithm work / why isn't this reaching people." Also use it as the
   knowledge base behind /social-board and any content-generation workflow. Reach for it even when the
   user doesn't name "the algorithm" — if they're making a post to be distributed, the ranking rules
   apply.
