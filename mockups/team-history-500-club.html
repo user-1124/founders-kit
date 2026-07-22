@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BettorEdge · The .500 Club — Team History Mockup</title>
+<style>
+  /* ------- Committed single-world poster palette ------- */
+  :root{
+    --ink:#0A0E12;            /* banner + page ground */
+    --ink-2:#0D1319;          /* banner inner */
+    --concrete:#F1EEE7;       /* stat-grid ground */
+    --concrete-edge:#E4E0D6;
+    --stat:#14181D;           /* stat numerals on concrete */
+    --hair:#20262E;
+    /* BettorEdge electric-green gradient (stands in for reference orange) */
+    --g-top:#C6FF4D;
+    --g-mid:#57D400;
+    --g-bot:#00A83E;
+    --edge:#38E06A;           /* accent green */
+    --cond:"Arial Narrow","Helvetica Neue",Arial,"Liberation Sans",sans-serif;
+    --body:"Helvetica Neue",Arial,system-ui,sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    background:#05070A;
+    color:#fff;
+    font-family:var(--body);
+    display:flex;
+    justify-content:center;
+    padding:32px 16px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ------- Poster shell (portrait social ratio) ------- */
+  .poster{
+    width:100%;
+    max-width:760px;
+    background:var(--ink);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 40px 90px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.04);
+  }
+
+  /* ------- Attribution strip ------- */
+  .attrib{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:20px 26px 16px;
+    font-size:20px;
+    color:#c9cdd2;
+    font-weight:400;
+    letter-spacing:.1px;
+  }
+  .attrib .avatar{
+    width:34px;height:34px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #7bffa6, #00a83e 70%);
+    display:grid;place-items:center;
+    font-weight:800;font-size:15px;color:#04270f;
+    flex:0 0 auto;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);
+  }
+  .attrib b{color:#fff;font-weight:700;}
+  .attrib .brand{color:var(--edge);font-weight:800;}
+
+  /* ------- Title banner ------- */
+  .banner{
+    background:
+      radial-gradient(120% 140% at 12% -10%, rgba(56,224,106,.10), transparent 55%),
+      linear-gradient(180deg,#0d1319,#080b0f);
+    padding:8px 30px 26px;
+    text-align:center;
+  }
+  .title{
+    margin:0;
+    font-family:var(--cond);
+    font-weight:800;
+    font-size:118px;
+    line-height:.86;
+    letter-spacing:-.5px;
+    transform:scaleY(1.18);
+    transform-origin:top center;
+    padding-top:14px;
+    background:linear-gradient(178deg,var(--g-top) 4%,var(--g-mid) 52%,var(--g-bot) 98%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;
+    text-shadow:0 2px 0 rgba(0,0,0,.15);
+    white-space:nowrap;
+  }
+  .subtitle{
+    margin:30px auto 0;
+    font-family:var(--cond);
+    font-weight:700;
+    font-size:23px;
+    letter-spacing:.2px;
+    color:#fff;
+    text-transform:uppercase;
+    transform:scaleY(1.06);
+  }
+  .subtitle .hl{color:var(--edge);}
+
+  /* ------- Stat grid ------- */
+  .grid-wrap{
+    background:
+      radial-gradient(140% 90% at 50% 0%, #ffffff 0%, var(--concrete) 40%, var(--concrete-edge) 100%);
+    padding:34px 26px 20px;
+  }
+  .grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:26px 30px;
+  }
+  .cell{
+    width:132px;
+    text-align:center;
+  }
+  .logo{
+    height:88px;
+    border-radius:6px;
+    display:grid;
+    place-items:center;
+    box-shadow:0 3px 8px rgba(0,0,0,.28), inset 0 0 0 2px rgba(255,255,255,.06);
+    overflow:hidden;
+    position:relative;
+  }
+  .logo .mark{
+    font-family:var(--cond);
+    font-weight:800;
+    font-size:40px;
+    letter-spacing:-1px;
+    line-height:1;
+    transform:scaleY(1.12);
+  }
+  .stat{
+    margin-top:10px;
+    font-family:var(--cond);
+    font-weight:800;
+    font-size:38px;
+    color:var(--stat);
+    letter-spacing:-.5px;
+    font-variant-numeric:tabular-nums;
+    transform:scaleY(1.08);
+  }
+
+  /* ------- Footer ------- */
+  .footer{
+    background:var(--concrete-edge);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 26px 20px;
+  }
+  .lockup{display:flex;align-items:center;gap:11px;}
+  .lockup .be{
+    width:38px;height:38px;border-radius:9px;
+    background:linear-gradient(160deg,var(--g-mid),var(--g-bot));
+    display:grid;place-items:center;
+    font-family:var(--cond);font-weight:800;font-size:22px;color:#052a10;
+    transform:none;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+  }
+  .lockup .wm{font-family:var(--cond);font-weight:800;font-size:26px;color:#14181d;letter-spacing:-.3px;}
+  .lockup .wm span{color:#00a83e;}
+  .fineprint{
+    font-family:var(--cond);
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.4px;
+    color:#5a5f5a;
+    text-transform:uppercase;
+    text-align:right;
+  }
+
+  @media (max-width:640px){
+    .title{font-size:74px;}
+    .subtitle{font-size:16px;}
+    .cell{width:132px;}
+  }
+</style>
+</head>
+<body>
+  <div class="poster">
+
+    <div class="attrib">
+      <div class="avatar">BE</div>
+      <div>From the <b>BettorEdge</b> <span class="brand">Social Board</span></div>
+    </div>
+
+    <div class="banner">
+      <h1 class="title">THE .500 CLUB</h1>
+      <div class="subtitle">Every NFL team with a <span class="hl">.500 or better record all-time</span></div>
+    </div>
+
+    <div class="grid-wrap">
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <div class="footer">
+      <div class="lockup">
+        <div class="be">BE</div>
+        <div class="wm">Bettor<span>Edge</span></div>
+      </div>
+      <div class="fineprint">AAFC + APFA not included</div>
+    </div>
+
+  </div>
+
+<script>
+  // All-time win % (≥.500), mirroring the reference graphic.
+  // bg = primary team color, fg = wordmark color, abbr = team mark.
+  const teams = [
+    {abbr:"GB",  bg:"#203731", fg:"#FFB612", pct:".572"},
+    {abbr:"DAL", bg:"#041E42", fg:"#FFFFFF", pct:".571"},
+    {abbr:"BAL", bg:"#241773", fg:"#9E7C0C", pct:".570"},
+    {abbr:"NE",  bg:"#002244", fg:"#C60C30", pct:".555"},
+    {abbr:"CHI", bg:"#0B162A", fg:"#C83803", pct:".554"},
+    {abbr:"KC",  bg:"#E31837", fg:"#FFB81C", pct:".550"},
+    {abbr:"MIA", bg:"#008E97", fg:"#FC4C02", pct:".550"},
+    {abbr:"MIN", bg:"#4F2683", fg:"#FFC62F", pct:".550"},
+    {abbr:"SF",  bg:"#AA0000", fg:"#B3995D", pct:".547"},
+    {abbr:"PIT", bg:"#101820", fg:"#FFB612", pct:".538"},
+    {abbr:"DEN", bg:"#0A2343", fg:"#FB4F14", pct:".528"},
+    {abbr:"SEA", bg:"#002244", fg:"#69BE28", pct:".525"},
+    {abbr:"IND", bg:"#002C5F", fg:"#FFFFFF", pct:".524"},
+    {abbr:"NYG", bg:"#0B2265", fg:"#A71930", pct:".518"},
+    {abbr:"LAR", bg:"#003594", fg:"#FFD100", pct:".510"},
+    {abbr:"LV",  bg:"#0B0B0B", fg:"#A5ACAF", pct:".509"},
+    {abbr:"CLE", bg:"#311D00", fg:"#FF3C00", pct:".503"},
+    {abbr:"LAC", bg:"#0080C6", fg:"#FFC20E", pct:".502"},
+    {abbr:"PHI", bg:"#004C54", fg:"#A5ACAF", pct:".502"},
+  ];
+
+  const grid = document.getElementById("grid");
+  for (const t of teams){
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    cell.innerHTML =
+      '<div class="logo" style="background:'+t.bg+'">' +
+        '<span class="mark" style="color:'+t.fg+'">'+t.abbr+'</span>' +
+      '</div>' +
+      '<div class="stat">'+t.pct+'</div>';
+    grid.appendChild(cell);
+  }
+</script>
+</body>
+</html>
